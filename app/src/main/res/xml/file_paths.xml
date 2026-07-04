@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Allows sharing files from Downloads folder -->
+    <external-path name="downloads" path="Download/" />
+    <!-- Allows sharing from app external files dir (fallback) -->
+    <external-files-path name="external_files" path="." />
+</paths>

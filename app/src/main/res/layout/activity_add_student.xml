@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_add_student.xml — PREMIUM REDESIGN
+  ALL IDs preserved:
+    etStudentName | etStudentEmail | etRollNo
+    btnAddStudent | btnBulkImport | btnDownloadSample | progressBar
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ══ NAVY HEADER ══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A237E"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="36dp"
+            android:paddingBottom="24dp"
+            android:elevation="10dp">
+
+            <TextView
+                android:text="Class Roster"
+                android:textSize="12sp"
+                android:textColor="#90CAF9"
+                android:letterSpacing="0.04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Add New Student"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Enter student details or bulk import via CSV"
+                android:textSize="13sp"
+                android:textColor="#90CAF9"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- ══ BODY ══ -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- SECTION LABEL -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="14dp">
+                <View android:layout_width="3dp" android:layout_height="18dp" android:background="#1A237E" android:layout_marginEnd="10dp"/>
+                <TextView android:text="Student Details" android:textStyle="bold" android:textColor="#1A237E" android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- FORM CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="0dp"
+                android:layout_marginBottom="18dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View android:layout_width="match_parent" android:layout_height="4dp" android:background="#1A237E"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="20dp">
+
+                        <!-- Student Name -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:hint="Student Name"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxCornerRadiusTopStart="12dp"
+                            app:boxCornerRadiusTopEnd="12dp"
+                            app:boxCornerRadiusBottomStart="12dp"
+                            app:boxCornerRadiusBottomEnd="12dp"
+                            app:boxStrokeColor="#1A237E"
+                            app:hintTextColor="#1A237E">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etStudentName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:textColor="#212121"
+                                android:padding="14dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Student Email -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:hint="Student Email"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxCornerRadiusTopStart="12dp"
+                            app:boxCornerRadiusTopEnd="12dp"
+                            app:boxCornerRadiusBottomStart="12dp"
+                            app:boxCornerRadiusBottomEnd="12dp"
+                            app:boxStrokeColor="#1A237E"
+                            app:hintTextColor="#1A237E">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etStudentEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                android:textColor="#212121"
+                                android:padding="14dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Roll Number -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Roll Number"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxCornerRadiusTopStart="12dp"
+                            app:boxCornerRadiusTopEnd="12dp"
+                            app:boxCornerRadiusBottomStart="12dp"
+                            app:boxCornerRadiusBottomEnd="12dp"
+                            app:boxStrokeColor="#1A237E"
+                            app:hintTextColor="#1A237E">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etRollNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textColor="#212121"
+                                android:padding="14dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ADD STUDENT BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddStudent"
+                android:text="＋  ADD STUDENT"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:letterSpacing="0.04"
+                android:layout_marginBottom="10dp"
+                app:cornerRadius="14dp"
+                app:backgroundTint="#1A237E"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"/>
+
+            <!-- SECTION LABEL: Bulk Import -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="12dp">
+                <View android:layout_width="3dp" android:layout_height="18dp" android:background="#43A047" android:layout_marginEnd="10dp"/>
+                <TextView android:text="Bulk Import" android:textStyle="bold" android:textColor="#1A237E" android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- IMPORT STUDENTS CSV -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBulkImport"
+                android:text="📥  IMPORT STUDENTS (CSV)"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                app:backgroundTint="#2E7D32"
+                app:cornerRadius="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"/>
+
+            <!-- DOWNLOAD SAMPLE CSV -->
+            <Button
+                android:id="@+id/btnDownloadSample"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="⬇  DOWNLOAD SAMPLE CSV"
+                android:textColor="#546E7A"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:backgroundTint="#ECEFF1"
+                app:cornerRadius="12dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <!-- LOADER -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="#F4F6FA">-->
+
+<!--    <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="24dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        &lt;!&ndash; TITLE &ndash;&gt;-->
+
+<!--        <TextView-->
+<!--            android:text="Add New Student"-->
+<!--            android:textSize="22sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#222"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        &lt;!&ndash; NAME &ndash;&gt;-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/etStudentName"-->
+<!--            android:hint="Student Name"-->
+<!--            android:textColor="#000"-->
+<!--            android:textColorHint="#888"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:background="@android:drawable/edit_text"-->
+<!--            android:padding="14dp"-->
+<!--            android:layout_marginBottom="12dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        &lt;!&ndash; EMAIL &ndash;&gt;-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/etStudentEmail"-->
+<!--            android:hint="Student Email"-->
+<!--            android:textColor="#000"-->
+<!--            android:textColorHint="#888"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:background="@android:drawable/edit_text"-->
+<!--            android:padding="14dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/etRollNo"-->
+<!--            android:hint="Roll Number"-->
+<!--            android:textColor="#000"-->
+<!--            android:textColorHint="#888"-->
+<!--            android:background="@android:drawable/edit_text"-->
+<!--            android:padding="14dp"-->
+<!--            android:inputType="number"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+
+<!--        &lt;!&ndash; ADD STUDENT &ndash;&gt;-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnAddStudent"-->
+<!--            android:text="ADD STUDENT"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:layout_marginBottom="12dp"-->
+<!--            app:cornerRadius="12dp"-->
+<!--            app:backgroundTint="#1E5DB3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"/>-->
+
+<!--        &lt;!&ndash; IMPORT CSV &ndash;&gt;-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnBulkImport"-->
+<!--            android:text="IMPORT STUDENTS (CSV)"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            app:backgroundTint="#43A047"-->
+<!--            app:cornerRadius="12dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnDownloadSample"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:text="DOWNLOAD SAMPLE CSV"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:backgroundTint="#757575"/>-->
+
+<!--        &lt;!&ndash; LOADER &ndash;&gt;-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:visibility="gone"/>-->
+
+<!--    </LinearLayout>-->
+
+<!--</ScrollView>-->

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/item_student_record.xml
+     Used by StudentAttendanceReportActivity RecyclerView
+     Columns: Subject | Date | Time | Distance | Status
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:minWidth="900dp">
+
+    <!-- SUBJECT weight=2.2 -->
+    <TextView android:id="@+id/txtSubject"
+        android:layout_width="0dp" android:layout_weight="2.2" android:layout_height="match_parent"
+        android:gravity="center_vertical" android:paddingStart="14dp" android:paddingEnd="6dp"
+        android:textSize="12sp" android:textColor="#1A237E" android:textStyle="bold"
+        android:maxLines="1" android:ellipsize="end"/>
+
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E8EAF6"/>
+
+    <!-- DATE weight=1.5 -->
+    <TextView android:id="@+id/txtDate"
+        android:layout_width="0dp" android:layout_weight="1.5" android:layout_height="match_parent"
+        android:gravity="center_vertical" android:paddingStart="10dp" android:paddingEnd="6dp"
+        android:textSize="12sp" android:textColor="#37474F" android:maxLines="1"/>
+
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E8EAF6"/>
+
+    <!-- TIME weight=1.3 -->
+    <TextView android:id="@+id/txtTime"
+        android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="match_parent"
+        android:gravity="center_vertical" android:paddingStart="10dp" android:paddingEnd="6dp"
+        android:textSize="12sp" android:textColor="#546E7A" android:maxLines="1"/>
+
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E8EAF6"/>
+
+    <!-- DISTANCE weight=1.4 -->
+    <TextView android:id="@+id/txtDistance"
+        android:layout_width="0dp" android:layout_weight="1.4" android:layout_height="match_parent"
+        android:gravity="center_vertical" android:paddingStart="10dp" android:paddingEnd="6dp"
+        android:textSize="12sp" android:textColor="#546E7A" android:maxLines="1"/>
+
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E8EAF6"/>
+
+    <!-- STATUS weight=1.3 -->
+    <TextView android:id="@+id/txtStatus"
+        android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="26dp"
+        android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center" android:textSize="11sp" android:textStyle="bold" android:maxLines="1"/>
+
+</LinearLayout>

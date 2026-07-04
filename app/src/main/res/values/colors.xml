@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Brand Colors -->
+    <color name="colorPrimary">#0047AB</color>
+    <color name="colorPrimaryDark">#003A8C</color>
+    <color name="primaryButton">#0D2A5C</color>
+    <color name="screenBg">#F8FAFF</color>
+    <color name="colorAccent">#FFD700</color>
+    <color name="black">#000000</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="primaryColor">#0D47A1</color>
+    <color name="red">#E00B0BFF</color>
+    <color name="gray">#9E9E9E</color>
+
+
+
+    <color name="dashboard_bg">#F4F6FA</color>
+    <color name="premiumWhite">#FFFFFF</color>
+    <color name="primaryBlue">#1565C0</color>
+    <color name="textDark">#1A1A1A</color>
+    <color name="textLight">#6B7280</color>
+    <color name="textSecondary">#757575</color>
+    <color name="softBlue">#E3F2FD</color>
+    <color name="cardWhite">#FFFFFF</color>
+    <color name="softShadow">#E0E0E0</color>
+    <!-- UI Colors -->
+    <color name="bg_light">#F4F7FB</color>
+    <color name="text_primary">#1E1E1E</color>
+    <color name="textPrimary">#1E293B</color>
+    <color name="textHint">#94A3B8</color>
+    <color name="text_dark">#2E3549</color>
+    <color name="text_secondary">#9BA5B7</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- 🔹 Compatibility color aliases -->
+    <color name="primary">@color/colorPrimary</color>
+    <color name="primaryDark">@color/colorPrimaryDark</color>
+    <color name="accent">@color/colorAccent</color>
+    <color name="brandPrimary">@color/colorPrimary</color>
+    <color name="backgroundLight">@color/bg_light</color>
+    <color name="text_secondaryPrimary">@color/text_secondary</color>
+
+</resources>

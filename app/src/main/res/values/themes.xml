@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.S" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+</resources>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+
+        <style name="Theme.S" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+            <item name="colorPrimary">@color/colorPrimary</item>
+            <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+            <item name="colorAccent">@color/colorAccent</item>
+
+            <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+            <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        </style>
+
+    </resources>-->
+
+
+
+
+
+    <!--
+    <resources xmlns:tools="http://schemas.android.com/tools">
+        &lt;!&ndash; Base application theme. &ndash;&gt;
+        <style name="Theme.AttendanceApp" parent="Theme.Material3.Light.NoActionBar">
+            <item name="colorPrimary">@color/brandPrimary</item>
+            <item name="colorPrimaryContainer">@color/primary_dark</item>
+            <item name="colorSecondary">@color/accent</item>
+            <item name="android:statusBarColor">@color/primary_dark</item>
+        </style>
+
+
+        <style name="Theme.S" parent="Base.Theme.S" />
+    </resources>-->
+

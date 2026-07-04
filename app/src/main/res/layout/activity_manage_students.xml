@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_manage_students.xml — PREMIUM REDESIGN
+  ALL IDs preserved:
+    btnAddStudent | recyclerStudents
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F4F6FF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ══ NAVY HEADER ══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1A237E"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="24dp"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:text="Class Roster"
+                    android:textSize="12sp"
+                    android:textColor="#90CAF9"
+                    android:letterSpacing="0.04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Manage Students"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Student count badge -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#283593"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:text="👥  ROSTER"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#90CAF9"
+                    android:letterSpacing="0.10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:text="Add or import students for this class"
+            android:textColor="#90CAF9"
+            android:textSize="13sp"
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- ══ BODY ══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp">
+
+        <!-- ADD STUDENT BUTTON -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddStudent"
+            android:text="＋  Add Student"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            app:cornerRadius="14dp"
+            app:backgroundTint="#1A237E"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- Section label -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <View android:layout_width="3dp" android:layout_height="18dp" android:background="#1A237E" android:layout_marginEnd="10dp"/>
+            <TextView android:text="Students List" android:textStyle="bold" android:textColor="#1A237E" android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- RECYCLER fills remaining space -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerStudents"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:orientation="vertical"-->
+<!--    android:background="#F5F7FB"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    &lt;!&ndash; HEADER &ndash;&gt;-->
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="120dp"-->
+<!--        app:cardCornerRadius="18dp"-->
+<!--        app:cardElevation="6dp"-->
+<!--        app:cardBackgroundColor="#1E5CB3">-->
+
+<!--        <LinearLayout-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TextView-->
+<!--                android:text="Manage Students"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <TextView-->
+<!--                android:text="Add or import students for this class"-->
+<!--                android:textColor="#E3F2FD"-->
+<!--                android:textSize="14sp"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </com.google.android.material.card.MaterialCardView>-->
+
+
+<!--    &lt;!&ndash; ACTION BUTTONS &ndash;&gt;-->
+
+<!--    <LinearLayout-->
+<!--        android:orientation="horizontal"-->
+<!--        android:paddingStart="16dp"-->
+<!--        android:paddingEnd="16dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnAddStudent"-->
+<!--            android:text="Add Student"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            app:cornerRadius="12dp"-->
+<!--            android:backgroundTint="#1E5CB3"/>-->
+
+
+
+<!--    </LinearLayout>-->
+
+
+<!--    &lt;!&ndash; STUDENT LIST TITLE &ndash;&gt;-->
+
+<!--    <TextView-->
+<!--        android:text="Students List"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="#222222"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+<!--    &lt;!&ndash; STUDENTS LIST &ndash;&gt;-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerStudents"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"/>-->
+
+<!--</LinearLayout>-->

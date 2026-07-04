@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">s</string>
+    <string name="login_register_text">"Teacher?" <font color='#0A2030'>Register here</font></string>
+    <string name="register_text">Already have an account? <font color='#0A2030'>Login</font></string>
+    <string-array name="user_roles">
+        <item>Student</item>
+        <item>Teacher</item>
+    </string-array>
+    <string name="dashboard">Dashboard</string>
+    <string name="face_scan">Face Scan</string>
+
+    <string name="start_scan">Start Face Scan</string>
+    <string name="app_name_splash">Face Recognition System</string>
+    <string name="btn_get_started">GET STARTED</string>
+    <string name="s">Attendance App</string>
+
+    <!-- Camera / Face Scan -->
+    <string name="scanning">Scanning...</string>
+    <string name="subject_dbms">DBMS</string>
+    <string name="class_info">SY Computer • Batch A</string>
+
+    <string name="student_email">Student Email</string>
+    <string name="student_name">Student Name</string>
+    <string name="add_student">Add Student</string>
+    <string name="mark_attendance">Mark Attendance</string>
+
+    <string name="verify_face_mark_attendance">Verify Face &amp; Mark Attendance</string>
+
+
+    <!-- App name -->
+
+
+    <!-- Activity: Attendance Report -->
+    <string name="attendance_report_title">Attendance Report</string>
+    <string name="all_dates_subjects">All Dates  •  All Subjects</string>
+
+    <!-- Search bar -->
+    <string name="search_icon">🔍</string>
+    <string name="search_hint">Search student name or roll no…</string>
+
+    <!-- Filter row -->
+    <string name="pick_date">📅  Pick Date</string>
+
+    <!-- Summary cards -->
+    <string name="status_present">✔ Present</string>
+    <string name="status_absent">✘ Absent</string>
+    <string name="rate_label">📊 Rate</string>
+
+    <!-- Chart -->
+    <string name="attendance_overview">Attendance Overview</string>
+
+    <!-- Table -->
+    <string name="student_records">Student Records</string>
+    <string name="zero_records">0 records</string>
+
+    <!-- Table column headers -->
+    <string name="col_name">Name</string>
+    <string name="col_roll">Roll No</string>
+    <string name="col_subject">Subject</string>
+    <string name="col_date">Date</string>
+    <string name="col_location">Location</string>
+    <string name="col_status">Status</string>
+
+    <!-- Export buttons -->
+    <string name="export_pdf">⬇ Export PDF</string>
+    <string name="export_csv">⬇ Export CSV</string>
+
+    <!-- Record count format (use with String.format in Java) -->
+    <string name="record_count_format">%d records</string>
+</resources>

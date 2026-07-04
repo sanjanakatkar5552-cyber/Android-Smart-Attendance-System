@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_classroom_setting.xml — PREMIUM REDESIGN
+  ALL IDs preserved:
+    etRadius | switchFace | switchLocation | switchQR
+    mapView | tvLatitude | tvLongitude
+    btnCapture | btnTestRadius | btnSave
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F4F6FF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ══ NAVY HEADER ══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A237E"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="36dp"
+            android:paddingBottom="24dp"
+            android:elevation="10dp">
+            <TextView android:text="⚙  Configure" android:textSize="12sp" android:textColor="#90CAF9" android:letterSpacing="0.04" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="Classroom Settings" android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF" android:layout_marginTop="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- ══ BODY ══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="24dp">
+
+            <!-- ① RADIUS CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="0dp"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <View android:layout_width="match_parent" android:layout_height="4dp" android:background="#1A237E"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="14dp" android:paddingBottom="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                            <View android:layout_width="3dp" android:layout_height="16dp" android:background="#1A237E" android:layout_marginEnd="10dp"/>
+                            <TextView android:text="Attendance Radius" android:textStyle="bold" android:textColor="#1A237E" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Attendance Radius (meters)"
+                            app:boxBackgroundMode="outline"
+                            app:boxStrokeColor="@color/primaryBlue">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etRadius"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"
+                                android:padding="12dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ② FEATURE TOGGLES CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="0dp"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <View android:layout_width="match_parent" android:layout_height="4dp" android:background="#43A047"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="14dp" android:paddingBottom="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="14dp">
+                            <View android:layout_width="3dp" android:layout_height="16dp" android:background="#1A237E" android:layout_marginEnd="10dp"/>
+                            <TextView android:text="Feature Toggles" android:textStyle="bold" android:textColor="#1A237E" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchFace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Enable Face Verification"
+                            android:textColor="#212121"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="14dp"/>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F4FF" android:layout_marginBottom="14dp"/>
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Enable Location Lock"
+                            android:textColor="#212121"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="14dp"/>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F4FF" android:layout_marginBottom="14dp"/>
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchQR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Enable QR Backup"
+                            android:textColor="#212121"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ③ MAP CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="0dp"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <View android:layout_width="match_parent" android:layout_height="4dp" android:background="#1565C0"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="14dp" android:paddingBottom="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                            <View android:layout_width="3dp" android:layout_height="16dp" android:background="#1A237E" android:layout_marginEnd="10dp"/>
+                            <TextView android:text="Classroom Location" android:textStyle="bold" android:textColor="#1A237E" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <org.osmdroid.views.MapView
+                            android:id="@+id/mapView"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:layout_marginBottom="12dp"/>
+                        <!-- Coordinates pill -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="#EEF2FF"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+                            <TextView android:id="@+id/tvLatitude" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Latitude: —" android:textColor="#1A237E" android:textSize="12sp" android:textStyle="bold"/>
+                            <TextView android:id="@+id/tvLongitude" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Longitude: —" android:textColor="#1A237E" android:textSize="12sp" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ④ BUTTONS -->
+            <Button
+                android:id="@+id/btnCapture"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="📍  Set Classroom Location"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:backgroundTint="#1A237E"
+                android:layout_marginBottom="8dp"
+                app:cornerRadius="12dp"
+                style="@style/Widget.MaterialComponents.Button"/>
+
+            <Button
+                android:id="@+id/btnTestRadius"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="🔍  Check Radius"
+                android:textColor="#1A237E"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:backgroundTint="#EEF2FF"
+                android:layout_marginBottom="8dp"
+                app:cornerRadius="12dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="✓  Save Settings"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:letterSpacing="0.02"
+                app:cornerRadius="14dp"
+                app:backgroundTint="#43A047"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+<!--<ScrollView-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:background="@android:color/white"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="16dp">-->
+
+<!--        &lt;!&ndash; Radius Input &ndash;&gt;-->
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Attendance Radius (meters)"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:boxBackgroundMode="outline"-->
+<!--            app:boxStrokeColor="@color/primaryBlue">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/etRadius"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:inputType="number"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:textSize="16sp"-->
+<!--                android:padding="12dp"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        &lt;!&ndash; Feature Toggles &ndash;&gt;-->
+
+<!--        <com.google.android.material.switchmaterial.SwitchMaterial-->
+<!--            android:id="@+id/switchFace"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Enable Face Verification"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:layout_marginTop="8dp"/>-->
+
+<!--        <com.google.android.material.switchmaterial.SwitchMaterial-->
+<!--            android:id="@+id/switchLocation"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Enable Location Lock"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:layout_marginTop="8dp"/>-->
+
+<!--        <com.google.android.material.switchmaterial.SwitchMaterial-->
+<!--            android:id="@+id/switchQR"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Enable QR Backup"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:layout_marginTop="8dp"/>-->
+
+<!--        &lt;!&ndash; Map Title &ndash;&gt;-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Classroom Location"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="16sp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:textColor="@android:color/black"/>-->
+
+<!--        &lt;!&ndash; Map &ndash;&gt;-->
+
+<!--        <org.osmdroid.views.MapView-->
+<!--            android:id="@+id/mapView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="250dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="12dp"/>-->
+
+<!--        &lt;!&ndash; Coordinates &ndash;&gt;-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvLatitude"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Latitude: -"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="14sp"-->
+<!--            android:layout_marginTop="4dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvLongitude"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Longitude: -"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="14sp"-->
+<!--            android:layout_marginBottom="10dp"/>-->
+
+<!--        &lt;!&ndash; Buttons &ndash;&gt;-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnCapture"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Set Classroom Location"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:backgroundTint="@color/primaryBlue"-->
+<!--            android:layout_marginTop="12dp"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTestRadius"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Check Radius"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:backgroundTint="@color/primaryBlue"-->
+<!--            android:layout_marginTop="8dp"/>-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnSave"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Save Settings"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            app:cornerRadius="12dp"-->
+<!--            app:backgroundTint="@color/primaryBlue"/>-->
+
+<!--    </LinearLayout>-->
+
+<!--</ScrollView>-->

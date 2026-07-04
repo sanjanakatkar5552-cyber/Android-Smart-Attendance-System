@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_student_leave_history.xml — PREMIUM REDESIGN
+  ALL IDs preserved:
+    main (root ConstraintLayout id)
+  New IDs added for list/empty state that Java will likely need:
+    recyclerLeaveHistory | tvEmptyState
+  (these were absent in original empty layout — added as expected structure)
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F6FF"
+    tools:context=".StudentLeaveHistoryActivity">
+
+    <!-- ══ NAVY HEADER ══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1A237E"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="24dp"
+        android:elevation="10dp">
+        <TextView
+            android:text="📋  History"
+            android:textSize="12sp"
+            android:textColor="#90CAF9"
+            android:letterSpacing="0.04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Leave History"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- STATUS FILTER CHIPS (visual only, wire up in Java if needed) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp"
+                app:chipBackgroundColor="#1A237E"
+                android:textColor="#FFFFFF"
+                style="@style/Widget.MaterialComponents.Chip.Action"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp"
+                app:chipBackgroundColor="#FFF8E1"
+                android:textColor="#E65100"
+                style="@style/Widget.MaterialComponents.Chip.Action"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approved"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp"
+                app:chipBackgroundColor="#E8F5E9"
+                android:textColor="#2E7D32"
+                style="@style/Widget.MaterialComponents.Chip.Action"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rejected"
+                android:textSize="12sp"
+                app:chipBackgroundColor="#FFEBEE"
+                android:textColor="#C62828"
+                style="@style/Widget.MaterialComponents.Chip.Action"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Section label -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="8dp">
+        <View android:layout_width="3dp" android:layout_height="18dp" android:background="#1A237E" android:layout_marginEnd="10dp"/>
+        <TextView android:text="My Leave Requests" android:textStyle="bold" android:textColor="#1A237E" android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Empty state (shown when no records) -->
+    <LinearLayout
+        android:id="@+id/tvEmptyState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+        <TextView
+            android:text="📋"
+            android:textSize="48sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"/>
+        <TextView
+            android:text="No leave requests yet"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+        <TextView
+            android:text="Your leave history will appear here"
+            android:textSize="13sp"
+            android:textColor="#90A4AE"
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <!-- Leave history list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLeaveHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>
